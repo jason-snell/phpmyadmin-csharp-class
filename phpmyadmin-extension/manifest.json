@@ -1,0 +1,17 @@
+{
+    "name": "mysql table to c# - jason snell",
+    "version": "1.3.3.7",
+    "manifest_version": 3,
+    "minimum_chrome_version": "120",
+    "description": "injects a button into phpMyAdmin to copy the table as a C# class",
+    "permissions": ["scripting"],
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "action": {},
+    "content_scripts": [{
+        "run_at": "document_start",
+        "js": [ "foreground.js" ],
+        "matches": [
+            "https://jsnell.dev/*"
+        ]
+    }]
+  }
